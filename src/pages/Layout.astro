@@ -1,20 +1,83 @@
 ---
 const { title } = Astro.props;
 ---
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} | Alex Chen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'EB Garamond', serif;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem; /* adds side margins */
+        line-height: 1.7;
+        background: #fdfdfd;
+        color: #111;
+      }
+
+      header {
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      header a {
+        text-decoration: none;
+        color: #0074d9;
+        margin-right: 1rem;
+        font-weight: bold;
+      }
+
+      header a:hover {
+        text-decoration: underline;
+      }
+
+      h1, h2, h3 {
+        color: #333;
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid #ccc;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      code {
+        background: #eee;
+        padding: 0.1rem 0.3rem;
+        border-radius: 3px;
+        font-family: "Fira Mono", monospace;
+      }
+
+      blockquote {
+        border-left: 4px solid #ccc;
+        padding-left: 1rem;
+        color: #555;
+        margin: 1rem 0;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <a href="/">Home</a> | 
-      <a href="/projects">Projects</a> | 
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
       <a href="/lab">Lab</a>
+      <a href="/personal">Personal</a>
     </header>
+
     <main>
       <slot />
     </main>
+
     <footer>
       <p>© {new Date().getFullYear()} Alex Chen</p>
     </footer>
