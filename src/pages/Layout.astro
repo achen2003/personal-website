@@ -16,10 +16,11 @@ const { title } = Astro.props;
         font-family: 'EB Garamond', serif;
         max-width: 900px;
         margin: 0 auto;
-        padding: 2rem 1.5rem; /* adds side margins */
+        padding: 2rem 2rem;
         line-height: 1.7;
-        background: #fdfdfd;
+        background: #f1ede1ff;
         color: #111;
+        box-sizing: border-box;
       }
 
       header {
@@ -75,7 +76,8 @@ const { title } = Astro.props;
     </header>
 
     <main>
-      <slot />
+      margin: 0 auto;
+      padding: 0 1rem;
     </main>
 
     <footer>
