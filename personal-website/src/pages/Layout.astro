@@ -1,0 +1,22 @@
+---
+const { title } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title} | Alex Chen</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">Home</a> | 
+      <a href="/projects">Projects</a> | 
+      <a href="/lab">Lab</a>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© {new Date().getFullYear()} Alex Chen</p>
+    </footer>
+  </body>
+</html>
